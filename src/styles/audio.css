@@ -1,0 +1,35 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: #333333;
+    gap: 12px;
+    padding: 0 20px;
+}
+.player {
+    flex-grow: 1;
+}
+.btn-play{
+    width: 0; 
+    height: 0; 
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 20px solid rgb(251, 252, 251);
+    background: transparent;
+    border-right: none;
+
+}
+.btn-pause{
+  height: 25px;
+  border-style: double;
+  border-width: 0px 0px 0px 20px;
+  border-color:  rgb(251, 252, 251);
+  border-right: none;
+  background: transparent;
+}
+.duration{
+    color: white;
+    width: 40px;
+    font-size: 18px;
+    font-weight: 600;
+}
