@@ -2,9 +2,13 @@ import React, { useEffect, useRef, useState }  from "react";
 import WaveSurfer from 'wavesurfer.js'
 import '../styles/audio.css';
 import { parseHoursMinSec } from "../utils/parse-min-sec";
+interface PropsAudio{
+  audio: string;
+  waveColor: string;
+  progressColor: string
+}
 
-
-const Audio: React.FC<{audio: string}> = ({audio}) => {
+const Audio: React.FC<PropsAudio> = ({audio, waveColor, progressColor}) => {
     const containerRef: any = useRef();
     const waveSurferRef: any = useRef();
     const [play, setPlay] = useState<boolean>(false);
@@ -25,9 +29,9 @@ const Audio: React.FC<{audio: string}> = ({audio}) => {
           container: containerRef.current,
           barWidth: 1,
           barHeight:4,
-          waveColor: ' #737373',
+          waveColor,
           height:25,
-          progressColor: '#ffffff'
+          progressColor
           
         })
         waveSurfer.load(audio)
@@ -38,7 +42,7 @@ const Audio: React.FC<{audio: string}> = ({audio}) => {
         return () => {
           waveSurfer.destroy()
         }
-      }, [audio])
+      }, [audio, waveColor, progressColor])
 
     return (
       <div className="wrapper">

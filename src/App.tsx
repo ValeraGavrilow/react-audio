@@ -7,7 +7,7 @@ import music from './binary/Kalimba.mp3';
 function App() {
   return (
     <div className="App">
-     <Audio audio={music}/>
+     <Audio audio={music} waveColor='#737373' progressColor='#ffffff' />
     </div>
   );
 }
