@@ -19,6 +19,7 @@
     border-right: none;
 
 }
+
 .btn-pause{
   height: 25px;
   border-style: double;
@@ -26,6 +27,9 @@
   border-color:  rgb(251, 252, 251);
   border-right: none;
   background: transparent;
+}
+.btn-play:hover, .btn-pause:hover{
+    cursor: pointer;
 }
 .duration{
     color: white;
